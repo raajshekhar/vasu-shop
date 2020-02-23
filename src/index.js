@@ -1,15 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { applyMiddleware, createStore } from 'redux';
+import thunk from 'redux-thunk';
 import { Router } from 'react-router-dom';
 import history from './history';
 import MainRoutes from './MainRoutes';
+import rootReducer from './rootReducer';
 import * as serviceWorker from './serviceWorker';
 import './index.css';
 
+const middlewares = [thunk];
+
+if (window.location.hostname === 'localhost') {
+  const { logger } = require('redux-logger');
+  middlewares.push(logger);
+}
+
+const store = createStore(rootReducer, {}, applyMiddleware(...middlewares));
+
 const routing = (
-      <Router history={history}>
-        <MainRoutes />
-      </Router>
+  <Provider store={store}>
+    <Router history={history}>
+      <MainRoutes />
+    </Router>
+  </Provider>
   );
 
 ReactDOM.render(routing, document.getElementById('root'));

@@ -1,7 +1,6 @@
 .items {
     margin: 20px;
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
   }
   .item {
@@ -14,6 +13,7 @@
     flex-direction: column;
     justify-content: space-around;
     margin-top: 10px;
+    margin-right: 10px;
   }
   .item img {
     width: 100px;

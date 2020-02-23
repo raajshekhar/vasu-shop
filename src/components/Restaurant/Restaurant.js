@@ -5,7 +5,7 @@ import './Restaurant.css';
 function Restaurant() {
   return (
     <div>
-    <section class="restaurant-banner" />
+    <section className="restaurant-banner" />
     <ItemsList />
     </div>
   );
