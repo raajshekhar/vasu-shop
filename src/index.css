@@ -11,3 +11,110 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* side-vertical-view */
+
+#side-vertical-view {
+  border-right: 1px solid #ccc;
+  box-shadow: -3px 0 9px 0px #ccc;
+  position: fixed;
+  width: 160px;
+  min-height: 100vh;
+}
+.logo {
+  text-align: center;
+}
+.logo img {
+  margin-top: 20px;
+}
+.title {
+  position: relative;
+  min-height: 70vh;
+}
+.title h1, .title h3 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  position: absolute;
+  bottom: 0;
+  left: 50px;
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  transform: rotate(270deg);
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -o-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+.title h3 {
+  font-family: sans-serif;
+  width: 70vh;
+  left: 90px;
+  bottom: 20px;
+  font-size: initial;
+}
+.social-links {
+  text-align: center;
+}
+.social-links img {
+  width: 30px;
+  margin-left: 10px;
+  height: 30px;
+}
+.changer {
+  text-align: right;
+  display: flex;
+  float: right;
+  justify-content: center;
+  align-items: center;
+}
+.changer img {
+  width: 50px;
+  transform: translate(45px, 10px);
+  border-radius: 100%;
+  box-shadow: 1px 0 3px 4px #0000002b;
+}
+.left-arrow {
+  font-size: 20px;
+  transform: translate(20px, 12px);
+  border: 1px solid;
+  border-radius: 100%;
+  padding: 2px 5px;
+  -webkit-font-smoothing: antialiased;
+}
+.right-arrow {
+  font-size: 20px;
+  transform: translate(60px, 10px);
+  border: 1px solid;
+  border-radius: 100%;
+  padding: 2px 5px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* side-vertical-view */
+
+#vertical-vertical-view {
+  min-height: 100vh;
+  margin-left: 160px;
+}
+.banner {
+  background-image: linear-gradient(
+      rgba(239, 0, 255, 0.07), 
+      rgba(255, 255, 255, 0.62)
+    ),url(./assests/images/breakfast_banner.jpg);
+  background-size: cover;
+  min-height: 50vh;
+  box-shadow: inset 0 0 0 1000px rgba(62, 56, 56, 0.2);
+}

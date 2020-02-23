@@ -1,0 +1,32 @@
+@import "./assets/styles/bootstrap.scss";
+@import "./assets/styles/globals.scss";
+@import "~toastr/toastr.scss";
+@import url('https://fonts.googleapis.com/css?family=Hind:400,500,600,700&display=swap');
+@font-face {
+  font-family: 'Bebas Neue';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/fonts/BebasNeue-Regular.eot'); /* IE9 Compat Modes */
+  src: local('Bebas Neue'), local('BebasNeue'),
+       url('./assets/fonts/BebasNeue-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./assets/fonts/BebasNeue-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./assets/fonts/BebasNeue-Regular.woff') format('woff'), /* Modern Browsers */
+       url('./assets/fonts/BebasNeue-Regular.ttf') format('truetype'); /* Safari, Android, iOS */
+  font-display: swap;
+}
+.content-wrapper {
+  margin-top: 105px;
+  @media only screen and (max-width: $small-screen-down) {
+    margin-top: 108px;
+  }
+  @media only screen and (max-width: $small-screen-up) {
+    margin-top: 65px;
+  }
+  .page-container {
+    padding-top: 30px;
+    cursor: default;
+    @media only screen and (max-width: $small-screen-up) {
+      padding-top: 10px;
+    }
+  }
+}
