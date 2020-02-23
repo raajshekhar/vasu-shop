@@ -12,11 +12,6 @@ import './index.css';
 
 const middlewares = [thunk];
 
-if (window.location.hostname === 'localhost') {
-  const { logger } = require('redux-logger');
-  middlewares.push(logger);
-}
-
 const store = createStore(rootReducer, {}, applyMiddleware(...middlewares));
 
 const routing = (
